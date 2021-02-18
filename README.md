@@ -124,6 +124,30 @@ commit时规范标题和详情
 
 https://mp.weixin.qq.com/s/SXOM76Lh8dnM2ETW--pwPg
 
+#### ==开源web框架==
+
+https://github.com/hoisie/web
+
+​	看上去挺简单的，但是已经有5年没有更新了
+
+https://github.com/labstack/echo
+
+​	这个看上去靠谱多了
+
+![image-20210218225305814](https://cdn.jsdelivr.net/gh/Brook1711/fig_for_blog/img/image-20210218225305814.png)
+
+找到一篇知乎文章，，里面有个大**==goweb框架==**对比
+
+![img](https://cdn.jsdelivr.net/gh/Brook1711/fig_for_blog/img/v2-49443c9154b18ab93979f8867a481e87_b.jpg)
+
+经过一番xjb对比，最后决定使用beego
+
+https://beego.me/docs/intro/
+
+![image-20210218231319554](https://cdn.jsdelivr.net/gh/Brook1711/fig_for_blog/img/image-20210218231319554.png)
+
+https://cdn.jsdelivr.net/gh/Brook1711/fig_for_blog/img/image-20210218231248758.png
+
 ## 数据库
 
 应该是要采用独立数据库的，==**mysql**==？这一块我也不太懂，后面慢慢摸索吧
@@ -139,6 +163,10 @@ https://mp.weixin.qq.com/s/SXOM76Lh8dnM2ETW--pwPg
 https://github.com/rubyhan1314/Golang-100-Days.git
 
 比较新，可以学一下
+
+https://github.com/astaxie/build-web-application-with-golang
+
+找到了一个比较新的用golang构建web应用的教程
 
 
 

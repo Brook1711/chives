@@ -1,19 +1,22 @@
-|          | xufeng guo      | hongyu li       | mingxin wei     |
-| :------: | --------------- | --------------- | --------------- |
-| 寒假期间 | 完成100days教程 | 完成100days教程 | 完成100days教程 |
-|  阶段一  |  - [ ] d |                 |                 |
-|          |                 |                 |                 |
+|          | 阶段目标  | 完成情况   |
+| :------: | --------------- | --------------- |
+| 寒假期间 | 完成100days教程 |  |
+|  阶段一  | 搭建简易demo，可以网页播放本地视频（先通过localhost实现）。<br />并通过视频时长、哈希校验等方式判断视频源。<br /><li>3. </li>月底将该服务部署到在线服务器，并与域名绑定 |                 |
+| 阶段二 | 完成后端用户数据、弹幕、评论数据库。 |                 |
+| 阶段三 | | |
+| 阶段四 | 在六月底暑假前夕上线完整服务。包括注册登陆、发送评论、发送弹幕 | |
+| 阶段五 | 那时候应该是暑假，酌情修复bug、对平台进行完善，并着手申请学校创业基金等，同时着手宣传和业务推广。 | |
+|  | | |
 
 ![Snipaste_2021-02-18_12-27-08的副本](https://cdn.jsdelivr.net/gh/Brook1711/fig_for_blog/img/Snipaste_2021-02-18_12-27-08%E7%9A%84%E5%89%AF%E6%9C%AC.png)
 
 
-| Task           | Time required | Assigned to   | Current Status | Finished | 
-|----------------|---------------|---------------|----------------|-----------|
-| Calendar Cache | > 5 hours  |  | in progress | - [x] ok?
-| Object Cache   | > 5 hours  |  | in progress | [x] item1<br/>[ ] item2
-| Object Cache   | > 5 hours  |  | in progress | <ul><li>- [x] item1</li><li>- [ ] item2</li></ul>
-| Object Cache   | > 5 hours  |  | in progress | <ul><li>[x] item1</li><li>[ ] item2</li></ul>
+
+| Task | Time required | Assigned to | Current  Status | Finished |
+| ---- | ------------- | ----------- | --------------- | -------- |
+|      |               |             |                 |          |
+|      |               |             |                 |          |
+|      |               |             |                 |          |
 
 
-- [x] works
-- [x] works too
+

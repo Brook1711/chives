@@ -168,7 +168,9 @@ https://github.com/astaxie/build-web-application-with-golang
 
 找到了一个比较新的用golang构建web应用的教程
 
+关于web前端的教程可以看这个
 
+https://github.com/qianguyihao/Web
 
 然后还有我自己写的博客，内部特供(滑稽)
 

@@ -1,4 +1,5 @@
-# beego项目通过域名访问实现 
+# beego项目通过域名访问实现
+
 ## mingxinwei from bupt Email:mxwei@bupt.edu.cn
 
 本文旨在实现在digital ocean平台下，centos7.6环境搭建的beego的demo实现，可以通过域名访问到该beego项目，类似个人博客的搭建。用到了Cloudflare作为DNS解析服务器，并在freenom上注册了域名。
@@ -330,6 +331,7 @@ nohup: ignoring input and appending output to ‘nohup.out’
 
 ```
 nohup ./webApp >/dev/null 2>/dev/null&
+nohup ./webApp >/path/to/file
 ```
 
 0、1和2分别表示标准输入、标准输出和标准错误信息输出，可以用来指定需要重定向的标准输入或输出。

@@ -78,6 +78,7 @@ Style: R2L,Microsoft YaHei UI,25,&H66FFFFFF,&H66FFFFFF,&H66000000,&H66000000,0,0
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
+
     currentY = 1 # currentY * 25 -> Y .. currentY = 1 -> 16
     for danmu in danmu_list:
         style = ""

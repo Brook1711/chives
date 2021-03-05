@@ -110,7 +110,7 @@ def main():
     ass = generate_ass(danmu_list)
     with open(name+ ".ass", "wb+") as ass_file:
         ass_file.write(ass.encode("utf-8"))
-    print(name)
+    # print(name)
 
 if __name__ == "__main__":
     main()

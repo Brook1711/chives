@@ -928,11 +928,11 @@ nohup ./web_v1 >/dev/null 2>/dev/null&
 
 ### 找到`add configration`选项，找到`dockerfile`
 
-![image-20210308171714676](Week2-%E4%BD%BF%E7%94%A8docker%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8.assets/image-20210308171714676.png)
+![image-20210308171714676](https://cdn.jsdelivr.net/gh/Brook1711/fig_for_blog/img/image-20210308171714676.png)
 
 
 
-![image-20210308172021771](Week2-%E4%BD%BF%E7%94%A8docker%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8.assets/image-20210308172021771.png)
+![image-20210308172021771](https://cdn.jsdelivr.net/gh/Brook1711/fig_for_blog/img/image-20210308172021771.png)
 
 1、选择dockerfile路径
 
@@ -950,19 +950,19 @@ nohup ./web_v1 >/dev/null 2>/dev/null&
 
 在点击绿色按钮运行docker后就会看到编译器下方有一系列操作窗口
 
-![image-20210308172425536](Week2-%E4%BD%BF%E7%94%A8docker%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8.assets/image-20210308172425536.png)
+![image-20210308174855628](https://cdn.jsdelivr.net/gh/Brook1711/fig_for_blog/img/image-20210308174855628.png)
 
-其中在`attached console` 里面可以对容器进行命令行操作![image-20210308172451208](Week2-%E4%BD%BF%E7%94%A8docker%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8.assets/image-20210308172451208.png)
+其中在`attached console` 里面可以对容器进行命令行操作![image-20210308174845363](https://cdn.jsdelivr.net/gh/Brook1711/fig_for_blog/img/image-20210308174845363.png)
 
 在`properties`里面可以看到容器信息，点击`save`按钮可以直接保存镜像（刚运行起来之后必须手动save才会在docker desktop中看到对应镜像）
 
-![image-20210308172543566](Week2-%E4%BD%BF%E7%94%A8docker%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8.assets/image-20210308172543566.png)
+![image-20210308174833938](https://cdn.jsdelivr.net/gh/Brook1711/fig_for_blog/img/image-20210308174833938.png)
 
 `files`是对容器的类似sftp的窗口
 
-![image-20210308172746913](Week2-%E4%BD%BF%E7%94%A8docker%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8.assets/image-20210308172746913.png)
+![image-20210308174821202](https://cdn.jsdelivr.net/gh/Brook1711/fig_for_blog/img/image-20210308174821202.png)
 
 ### 最终效果
 
 此前将容器的8080端口绑定到了主机的8081端口，所以此时访问主机的`127.0.0.1:8081`即可看到网页：
-![image-20210308173047776](Week2-%E4%BD%BF%E7%94%A8docker%E5%88%9B%E5%BB%BA%E5%AE%B9%E5%99%A8.assets/image-20210308173047776.png)
+![image-20210308174808677](https://cdn.jsdelivr.net/gh/Brook1711/fig_for_blog/img/image-20210308174808677.png)

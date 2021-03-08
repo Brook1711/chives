@@ -63,22 +63,6 @@ def get_danmu_list(danmu_url):
     return danmu_list
 
 def generate_ass(danmu_list):
-    ass = """[Script Info]
-Title: Bilibili弹幕转ASS字幕
-Original Script: 由 https://github.com/dreamwalkerxz 制作
-ScriptType: v4.00+
-Collisions: Normal
-PlayResX: 560
-PlayResY: 420
-Timer: 10.0000
-[V4+ Styles]
-Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Fix,Microsoft YaHei UI,25,&H66FFFFFF,&H66FFFFFF,&H66000000,&H66000000,0,0,0,0,100,100,0,0,1,1,0,2,20,20,2,0
-Style: R2L,Microsoft YaHei UI,25,&H66FFFFFF,&H66FFFFFF,&H66000000,&H66000000,0,0,0,0,100,100,0,0,1,1,0,2,20,20,2,0
-[Events]
-Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
-"""
-
     currentY = 1 # currentY * 25 -> Y .. currentY = 1 -> 16
     for danmu in danmu_list:
         style = ""

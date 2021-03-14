@@ -1,0 +1,16 @@
+#dplayer {
+  width: 80%;
+  height: 80%;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+
+#img1 {
+    width: 566px;
+    height: 287px;
+    background-image: url(images/img1df750b4cea.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+

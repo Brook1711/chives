@@ -11,7 +11,8 @@ module.exports = {
 
     output: {
         filename: "[name].js",
-        path: resolve(__dirname, 'build'),
+        path: resolve(__dirname, 'static'),
+        publicPath: "static"
     },
     module: {
         rules: [
@@ -23,6 +24,7 @@ module.exports = {
                 test: /\.html$/,
 
                 loader: 'html-withimg-loader',
+
             },
             {
                 test: /\.(png|jpg|jpeg|gif)$/,

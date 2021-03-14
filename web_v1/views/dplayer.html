@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.jsdelivr.net/npm/dplayer@1.26.0/dist/DPlayer.min.js"></script>
+</head>
+<body>
+    <input type="file" accept="video/*" />
+    <div id="dplayer">
+    </div>
+    <script>
+        var dp = new DPlayer({
+            container:document.getElementById('dplayer'),
+            video:{
+                url:"",
+            },
+            screenshot:true,
+
+        })
+    </script>
+    <script>
+        (function localFileVideoPlayer() {
+            var playSelectedFile = function (event) {
+                var file = this.files[0]
+                var fileURL = URL.createObjectURL(file)
+                dp.video.src = fileURL
+            }
+            var inputNode = document.querySelector('input')
+            inputNode.addEventListener('change', playSelectedFile, false)
+        })()
+    </script>
+
+</body>
+</html>

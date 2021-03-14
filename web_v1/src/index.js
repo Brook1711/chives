@@ -1,4 +1,7 @@
-import DPlayer from 'dplayer'
+require('./index.less')
+import './index.css';
+require('./index.scss')
+
 var dp = new DPlayer({
     container:document.getElementById('dplayer'),
     video:{

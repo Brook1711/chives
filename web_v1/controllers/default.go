@@ -77,7 +77,7 @@ func (c *DanmuController) Get() {
 	//	cursor
 	//)
 
-	c.TplName = "index.tpl"
+	//c.TplName = "index.tql"
 	jsoninfo := c.GetString("id")
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)

@@ -1,16 +1,17 @@
 package controllers
 
 import (
+	"encoding/json"
 	beego "github.com/beego/beego/v2/server/web"
 )
 
 type DanmuRequest struct {
-	token 	string
-	id		string
-	author 	int64
-	time 	float32
-	text 	string
-	color 	int32
+	Token 	string
+	Id		string
+	Author 	int64
+	Time 	float32
+	Text 	string
+	Color 	int32
 	DplayerType int8
 }
 
@@ -23,9 +24,12 @@ type DanmuController struct {
 }
 
 func (c *DanmuController) Post() {
-	//jsoninfo := c.GetString("jsoninfo")
+	var data DanmuRequest
 	RequestData := c.Ctx.Input.RequestBody
-	c.Data["json"] = RequestData
+	//fmt.Println(RequestData)
+	json.Unmarshal(RequestData, &data)
+	//fmt.Println(data)
+	c.Data["json"] = data
 	c.ServeJSON()
 }
 

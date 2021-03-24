@@ -179,6 +179,18 @@ type DanmuController struct {
 	beego.Router("/v3", &controllers.DanmuController{})
 ```
 
+![image-20210324162044568](https://cdn.jsdelivr.net/gh/Brook1711/fig_for_blog/img/image-20210324162044568.png)
+
+https://blog.csdn.net/qq_36546907/article/details/88357887
+
+
+
+![image-20210324163114569](https://cdn.jsdelivr.net/gh/Brook1711/fig_for_blog/img/image-20210324163114569.png)
+
+
+
+https://juejin.cn/post/6844904145980243975
+
 
 
 ### 4.0.2、处理拉取弹幕的GET请求

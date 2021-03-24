@@ -4,8 +4,37 @@ import (
 	beego "github.com/beego/beego/v2/server/web"
 )
 
+type DanmuRequest struct {
+	token 	string
+	id		string
+	author 	int64
+	time 	float32
+	text 	string
+	color 	int32
+	DplayerType int8
+}
+
 type MainController struct {
 	beego.Controller
+}
+
+type DanmuController struct {
+	beego.Controller
+}
+
+func (c *DanmuController) Post() {
+	//jsoninfo := c.GetString("jsoninfo")
+	RequestData := c.Ctx.Input.RequestBody
+	c.Data["json"] = RequestData
+	c.ServeJSON()
+}
+
+func (c *DanmuController) Get() {
+	jsoninfo := c.GetString("jsoninfo")
+	if jsoninfo == "" {
+		c.Ctx.WriteString("jsoninfo is empty")
+		return
+	}
 }
 
 func (c *MainController) Get() {
@@ -13,3 +42,4 @@ func (c *MainController) Get() {
 	c.Data["Email"] = "brook1711@bupt.edu.cn"
 	c.TplName = "index.html"
 }
+

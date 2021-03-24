@@ -6,5 +6,6 @@ import (
 )
 
 func init() {
+	beego.Router("/v3", &controllers.DanmuController{})
     beego.Router("/", &controllers.MainController{})
 }

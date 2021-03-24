@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"fmt"
 	"context"
 	"encoding/json"
+	"fmt"
 	beego "github.com/beego/beego/v2/server/web"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
@@ -13,7 +13,7 @@ import (
 
 type DanmuRequest struct {
 	Token 	string
-	Player		string
+	Id  string
 	Author 	int64
 	Time 	float32
 	Text 	string
@@ -23,7 +23,7 @@ type DanmuRequest struct {
 
 type ReturnData struct {
 	Code int
-	Data []byte
+	Data DanmuRequest
 }
 
 
@@ -58,7 +58,7 @@ func (c *DanmuController) Post() {
 	ctx, cancel = context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 	//str := `{"token":"token-example","id":"vid-example","author":1000,"time":0,"text":"test","color":16777215,"type":0}`
-	danmu:=DanmuRequest{data.Token,data.Player,data.Author, data.Time, data.Text, data.Color, data.Type}
+	danmu:=DanmuRequest{data.Token,data.Id,data.Author, data.Time, data.Text, data.Color, data.Type}
 	insertOne,err :=collection.InsertOne(ctx,danmu)
 	//if err != nil {
 	//	log.Fatal(err)
@@ -85,7 +85,7 @@ func (c *DanmuController) Get() {
 	ctx, cancel = context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 	filter := bson.D{{"id",jsoninfo}}
-	var result ReturnData
+	var result DanmuRequest
 	err = collection.FindOne(ctx, filter).Decode(&result)
 	if err != nil {
 		fmt.Println(err)

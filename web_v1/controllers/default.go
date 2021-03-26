@@ -23,9 +23,17 @@ type DanmuRequest struct {
 	Type   int8
 }
 
+type Content struct {
+	Time float64
+	Type int32
+	Color int32
+	Author int64
+	Text string
+}
+
 type ReturnDatas struct {
 	Code int
-	Data [][]byte
+	Data []interface{}
 	//[[1,3,4,.5],]
 }
 
@@ -116,18 +124,31 @@ func (c *DanmuController) Get() {
 	danmu_and_code.Code = 0
 
 	for _, result := range results {
-		fmt.Println(result[0])
+		fmt.Println(result)
+		fmt.Println(result[1].Value)
 		//fmt.Println(result[0])
-		//var one_data []byte
+		//var one_data Content
 		//for i:=0;i<5;i++{
 		//	one_data = result[0].time, result[0].dplayertype, result[0].color, result[0].author, result[0].text
 		//}
-		//one_data[0] = result[0].time
+		//one_data = make(string,)
+		//one_data.append()
+		one_data := make([]interface{}, 0)
+		one_data = append(one_data, result[4].Value.(float64), result[7].Value.(int32),
+			result[6].Value.(int32), result[3].Value.(int64), result[5].Value.(string))
+		fmt.Println(one_data)
+		//one_data.Time = result[4].Value.(float64)
+		//one_data.Type = result[7].Value.(int32)
+		//one_data.Color = result[6].Value.(int32)
+		//one_data.Author = result[3].Value.(int64)
+		//one_data.Text = result[5].Value.(string)
 
-		//danmu_and_code.Data = append(danmu_and_code.Data, one_data)
+		danmu_and_code.Data = append(danmu_and_code.Data, one_data)
 	}
-
+	//c.Ctx.ResponseWriter(danmu_and_code)
 	//handle results
+	c.Data["json"] = danmu_and_code
+	c.ServeJSON()
 
 
 

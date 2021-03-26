@@ -15,7 +15,7 @@ import (
 
 type DanmuRequest struct {
 	Token  string
-	Id     string
+	Vid     string
 	Author int64
 	Time   float32
 	Text   string
@@ -62,7 +62,7 @@ func (c *DanmuController) Post() {
 	ctx, cancel = context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
 	//str := `{"token":"token-example","id":"vid-example","author":1000,"time":0,"text":"test","color":16777215,"type":0}`
-	danmu := DanmuRequest{data.Token, data.Id, data.Author, data.Time, data.Text, data.Color, data.Type}
+	danmu := DanmuRequest{data.Token, data.Vid, data.Author, data.Time, data.Text, data.Color, data.Type}
 	insertOne, err := collection.InsertOne(ctx, danmu)
 	//if err != nil {
 	//	log.Fatal(err)
@@ -111,17 +111,27 @@ func (c *DanmuController) Get() {
 	if err = cursor.All(context.TODO(), &results); err != nil {
 		fmt.Println(err)
 	}
+	var danmu_and_code ReturnDatas
+
+	danmu_and_code.Code = 0
 
 	for _, result := range results {
-		fmt.Println(result)
+		fmt.Println(result[0])
+		//fmt.Println(result[0])
+		//var one_data []byte
+		//for i:=0;i<5;i++{
+		//	one_data = result[0].time, result[0].dplayertype, result[0].color, result[0].author, result[0].text
+		//}
+		//one_data[0] = result[0].time
+
+		//danmu_and_code.Data = append(danmu_and_code.Data, one_data)
 	}
 
 	//handle results
 
-	var danmu_and_code ReturnDatas
 
-	danmu_and_code.Code = 0
-	append(danmu_and_code.Data, [results[0]['token']])
+
+
 	//  results[0]
 
 	if jsoninfo == "" {

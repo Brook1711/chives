@@ -23,9 +23,10 @@ type DanmuRequest struct {
 	Type   int8
 }
 
-type ReturnData struct {
+type ReturnDatas struct {
 	Code int
-	Data []DanmuRequest
+	Data [][]byte
+	//[[1,3,4,.5],]
 }
 
 type MainController struct {
@@ -71,14 +72,9 @@ func (c *DanmuController) Post() {
 }
 
 func (c *DanmuController) Get() {
-	//var (
-	//	collection *mongo.Collection
-	//	err        error
-	//	cursor
-	//)
-
-	//c.TplName = "index.tql"
-	jsoninfo := c.GetString("id")
+	c.TplName = "index.html"
+	//c.Ctx.WriteString("6666")
+	jsoninfo := c.GetString("vid")
 
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer cancel()
@@ -115,33 +111,18 @@ func (c *DanmuController) Get() {
 	if err = cursor.All(context.TODO(), &results); err != nil {
 		fmt.Println(err)
 	}
+
 	for _, result := range results {
 		fmt.Println(result)
 	}
 
-	//var result DanmuRequest
-	//err = collection.FindOne(ctx, filter).Decode(&result)
-	//if err != nil {
-	//	fmt.Println(err)
-	//}
-	//fmt.Println(result)
-	//filter := bson.D{{"id",jsoninfo}}
-	//var result ReturnData
-	//cur, err := collection.Find(ctx, filter)
-	//if err != nil { fmt.Println(err)}
-	//defer cur.Close(ctx)
-	//for cur.Next(ctx) {
-	//	var result bson.D
-	//	err := cur.Decode(&result)
-	//	if err != nil { fmt.Println(err) }
-	//	do something with result....
-	//}
-	//if err := cur.Err(); err != nil {
-	//	fmt.Println(err)
-	//}
+	//handle results
 
-	//err = collection.Find(context.TODO(), filter)
-	//.Decode(&result)
+	var danmu_and_code ReturnDatas
+
+	danmu_and_code.Code = 0
+	append(danmu_and_code.Data, [results[0]['token']])
+	//  results[0]
 
 	if jsoninfo == "" {
 		c.Ctx.WriteString("jsoninfo is empty")
